@@ -28,13 +28,20 @@ module.exports = {
     'import/extensions': [
       'error',
       'ignorePackages',
-      { '': 'never', tsx: 'never' },
+      { '': 'never', tsx: 'never', ts: 'never' },
     ],
     // prettier
     'prettier/prettier': 'error',
+    // jsx-a11y
+    'jsx-a11y/no-autofocus': 'off',
     // react
     'react/react-in-jsx-scope': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-props-no-spreading': 'off',
+    'react/display-name': 'off',
+    'no-extra-boolean-cast': 'off',
+    'no-param-reassign': 'off',
+    'no-console': 'off',
   },
 };
