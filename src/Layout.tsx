@@ -5,10 +5,6 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({children}:LayoutProps) {
-  return (
-    <Container maxW={{ base: '100%' }}>
-      {children}
-    </Container>
-  )
+export default function Layout({ children }: LayoutProps) {
+  return <Container maxW={{ base: '100%' }}>{children}</Container>;
 }

@@ -12,7 +12,7 @@ if (rootElement) {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Layout>
-          <App/>
+          <App />
         </Layout>
       </ChakraProvider>
     </React.StrictMode>,

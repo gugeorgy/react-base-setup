@@ -7,7 +7,6 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    "plugin:react-hooks/recommended",
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
@@ -20,7 +19,7 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react', 'react-hooks', 'react-refresh', '@typescript-eslint/eslint-plugin'],
+  plugins: ['react', 'react-refresh', '@typescript-eslint/eslint-plugin'],
   settings: {
     'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
@@ -34,11 +33,18 @@ module.exports = {
 
     'react/no-unused-prop-types': 'off',
 
-    'react/require-default-props': 'off',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
 
-    'no-console': ['error', { allow: ['warn', 'error'] }],
-
-    'react/jsx-no-bind': 'error',
+    'react/jsx-no-bind': [
+      'warn',
+      {
+        ignoreDOMComponents: false,
+        ignoreRefs: false,
+        allowArrowFunctions: false,
+        allowFunctions: false,
+        allowBind: false,
+      },
+    ],
 
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
