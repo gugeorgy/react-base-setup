@@ -31,7 +31,7 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
 
-    'react/no-unused-prop-types': 'off',
+    'react/prop-types': 'off',
 
     'no-console': ['warn', { allow: ['warn', 'error'] }],
 
